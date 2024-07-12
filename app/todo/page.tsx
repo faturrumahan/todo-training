@@ -1,9 +1,12 @@
 "use client";
 import React from "react";
+import dynamic from "next/dynamic";
 import TodoForm from "@/components/TodoForm";
-import TodoList from "@/components/TodoList";
+// import TodoList from "@/components/TodoList";
 // import PasswordForm from "@/components/PasswordForm";
 // import DynamicForm from "@/components/DynamicForm";
+
+const TodoList = dynamic(() => import("@/components/TodoList"));
 
 const TodoPage = () => {
   return (
