@@ -1,5 +1,9 @@
 import TodoFormProvider from "@/container/TodoFormProvider";
 import React from "react";
+import WithStyles from "./Button/WithStyles";
+import Button from "./Button/Index";
+
+const SubmitButton = WithStyles(Button);
 
 const TodoForm = () => {
   return (
@@ -16,9 +20,13 @@ const TodoForm = () => {
                 name="text"
               />
             </div>
-            <button className="px-5 py-2 bg-blue-600 text-white rounded">
+            {/* <button
+              type="submit"
+              className="px-5 py-2 bg-blue-600 text-white rounded"
+            >
               Submit
-            </button>
+            </button> */}
+            <SubmitButton type="submit" />
           </form>
           {errors.text && (
             <p className="text-red-400 text-sm">{errors.text.message}</p>
